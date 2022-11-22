@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Request Form</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='fontawsom-all.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='status.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  
+</head>
+  <body >
+	<div class="header">
+		<div><b>Plasma Donar App</b></div>
+        <ul>
+            <li><a class="active" href="{{ url_for('dashboard')}}">Home</a></li>
+        </ul>
+	   </div>
+	 </div>
+ <div class="register_main" >
+
+	<p class="sign" align="center">Request Form</p>
+    <form action="{{ url_for('requested')}}"method="post" >
+        <input type="text"  class="un" name="username" placeholder="Enter Your Name" required="required" style="color:black"/>
+        <input type="email"  class="un" name="email" placeholder="Enter Email" required="required" style="color:black"/>
+		<input type="text"  class="un" name="phone" placeholder="Enter 10-digit mobile number" required="required" style="color:black"/>
+
+        <select name="blood"  class="pass">
+					  <option value="select" selected>Choose your blood group</option>
+					  <option value="O Positive">O Positive</option>
+					  <option value="A Positive">A Positive</option>
+					  <option value="B Positive">B Positive</option>
+					  <option value="AB Positive">AB Positive</option>
+					  <option value="O Negative">O Negative</option>
+					  <option value="A Negative">A Negative</option>
+					  <option value="B Negative">B Negative</option>
+					  <option value="AB Negative">AB Negative</option>
+		</select>
+        <textarea  class="pass" rows="4" placeholder="Enter the address" required="required" style="color:black" name="address"></textarea>
+        <button type="submit" class="submit">Submit the request</button>
+    
+    </form><br>
+	<p class="navtoreg" align="center" style="color: black ;">Already have an account?<a href="{{url_for('login')}}" style="color:blue ;">Log in</p>
+ <br>
+<div style="color:black">
+    {{ pred }}</div>
+ </div>
+ 
+
+
+</body>
+</html>

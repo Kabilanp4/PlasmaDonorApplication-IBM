@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <title>Register Here</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='fontawsom-all.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='status.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+	<body>
+    <div class="header">
+      <div><b>Plasma Donar App</b></div>
+        <div class="hidden md:block">
+       </div>
+     </div>
+		<div class="main">
+		  <h2 class="sign" align="center" class="un">Sign in</h2>
+    <form action="{{ url_for('loginpage')}}"method="post">
+    	<input type="text" class="un" name="username" placeholder="Enter UserName" required="required" style="color:black" />
+        <input type="password" class="un" name="password" placeholder="Enter Password" required="required" style="color:black" />
+        <button type="submit"class="submit">Login</button><br><br> 
+		<p class="navtolog" align="center" style="color: rgb(26, 25, 25) ;">Don't have any account?<a href="{{url_for('register')}}" style="color:blue ;">Create account</p>
+    </form>
+<br><br>
+<div style="color:black">
+ {{ msg }}</div>
+ </div>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood donation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+          <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="shortcut icon" href="{{url_for('static',filename='fav.jpg')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='fontawsom-all.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='home.css')}}" />
+
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "bd3a70f2-8147-4d9c-9334-a0a00f5089de", // The ID of this integration.
+        region: "eu-gb", // The region your integration is hosted in.
+        serviceInstanceID: "154df801-5a37-45dd-9a46-4684bcbdacdf", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+      };
+      setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
+</head>
+<div class="container-fluid">
+<body style="font-family: cursive; background-color:#ff9f9f; font-size: 17px;">
+<div class="min-h-full" >
+
+    <nav class="bg-red-800">
+      
+      <div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex items-center">
+            
+            <div class="flex-shrink-0">
+              <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+            </div>
+            <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-4">
+                <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
+  
+                <a href="{{url_for('status')}}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Status</a>
+  
+               <a href="{{url_for('login')}}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Login as a donor</a>
+  
+                <a href="{{url_for('requester')}}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Post Request</a>
+              
+
+              </div>
+            </div>
+          </div>
+          
+          <div class="-mr-2 flex md:hidden">
+            <!-- Mobile menu button -->
+          </div>
+        </div>
+      </div>
+  
+    </nav>
+  
+    
+    <main>
+      <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+        <!-- Replace with your content -->
+        <div class="slider-detail">
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="{{url_for('static',filename='slide-02.jpg')}}" alt="First slide"style="width:100px;">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class=" bounceInDown">Donate Blood & Save a Life</h5>
+                            <p class=" bounceInLeft">Blood transfusions happen every day and save millions of lives across the world. However, it is 
+                              a sad thing that there are still several countries that do not have enough of a supply of blood or a higher number of 
+                              blood donors. Other countries rely on blood from people who ask money in turn for donations, which is very alarming and 
+                              heartbreaking.Due to the constant need for blood donations, blood collecting organizations across the world try to reach
+                               as many donors as they can.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /End replace -->
+      </div>
+    </main>
+  </div>
+  
+ 
+
+    <div class="container body-content">
+<div class="container">
+<div class="row justify-content-start" style="padding-top:10px;">
+<div class="col" style="padding-top:10px; padding-left: 180px;">
+    <strong><h2 style="font-size: 50px;">Why should we donate Blood?</h2></strong>
+    <img src="https://blood-donor.in/wp-content/uploads/2020/12/pngkey.com-donation-png-1753871-1638x2048.png" style="height: 500px; width:400px;" alt="" class="h-full w-full object-cover object-center">
+</div>
+    <div class="col" style="padding-top:10px;">
+    <div class="row justify-content-center" style="padding-top:10px;padding-right: 20%; padding-top: 100px;">
+        <P style="padding-right: 20%">It is also needed for regular transfusions for people with conditions such as thalassaemia and sickle cell disease and is used to make products such as clotting factors for people with haemophilia. There is a constant need for regular blood supply because blood can be stored for only a limited time before use. Regular blood donations by a sufficient number of healthy people are needed to ensure that safe blood will be available whenever and wherever it is needed.
+            Blood is the most precious gift that anyone can give to another person — the gift of life. A decision to donate your blood can save a life, or even several if your blood is separated into its components — red cells, platelets and plasma — which can be used individually for patients with specific conditions</P>
+                </div>
+                </div>
+                </div>
+      <br><br><br>
+                <div class="row justify-content-start" style="padding-top:10px;">
+
+                <div class="col" style="padding-top:10px;">
+
+                <div class="row justify-content-end" style="padding-top:10px; ">
+                  <h2 style="font-size: 50px; padding-right: 423px ; text-align: right;"><strong> About</strong></h2>
+                  <p style="padding-left: 220px;">We have a vision and are task oriented and are driven by people with a common interest, 
+                    we perform a variety of services with a social objective and on humanitarian grounds. We advocate and monitor policies through the provision of information. We address 
+                    various issues, such as human rights violations, environmental, health and livelihood. We analyze the root cause of the problems 
+                    and try to find pragmatic solutions through our expertise that serves as early warning mechanisms and help monitor and implement
+                     various policies and programmes in the most judicious manner. The objective of the Mission is to “build strong and vibrant
+                      institutional platforms for the rural poor that would enable them to increase household incomes through livelihood enhancements 
+                      and improved access to financial and other services”. The focus of the Mission will also include leveraging financial resources,
+                       livelihood support, public services and to ensure their entitlements.</p>
+                </div>
+
+                </div>
+                <div class="col" style="padding-top:10px;">
+                    <img alt="Image html" width="90%" height="90%" style="max-height:500px;max-width:500px;" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.pngmart.com%2Ffiles%2F7%2FBlood-Donation-PNG-Picture.png&f=1&nofb=1&ipt=3085ffe1ef67337d090c72753e1f66d8d6049c827658ee8340f346ab8046d559&ipo=images" />
+
+                </div>
+                </div>
+                <br><br><br>
+               
+                <div class="row justify-content-start" style="padding-top:10px; padding-left: 180px; background-color: orange">
+                  
+                <div class="col" style="padding-top:10px;">
+                  <strong><h2 style="font-size: 50px; padding-right: 100px;">Why should you give Blood?</h2></strong>
+
+<img alt="Image html" width="90%" height="90%" style="max-height:500px;max-width:500px;" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.YIGzzM1l22pAPyV1i0gi-AHaDK%26pid%3DApi&f=1&ipt=5366e2d0dd936142d9934541da1238617ad1647a6095c255dab51873270636c4&ipo=images" />
+                </div>
+                <div class="col" style="padding-top:10px;">
+                <div class="row justify-content-center" style="padding-top:10px;">
+                  <ul>
+                    <li>1. It saves lives — what else do you need to know?</li>
+                    <li>2. It is not more painful than losing a loved one that you may save by donating!</li>
+                    <li>3. It is your civic duty.</li>
+                    <li>4. Because I know too many people who can’t give blood.</li>
+                    <li>5. Because some day, I may need someone to do the same for me.</li>
+                    <li>6. Do unto others, as you would have them do unto you!</li>
+                    <li>7. Because if you need blood one day, you would not hesitate to take it, so why would you hesitate to give it?</li>
+                    <li>8. Blood donation is important because maintaining an adequate blood supply in our community secures blood transfusions for patients.</li>
+                    <li>9. Because I can.</li>
+                    <li>10. Nutter Butters.</li>
+                    <li>11. The question is, why not give blood?</li>
+                    <li>12. It gives donors a medical check at no cost.</li>
+                    <li>13. Free cookies, juice and the satisfaction of helping others.</li>
+                    <li>14. I can’t discover a cure for cancer, but I can help keep someone alive while they are waiting for a cure.</li>
+                  </ul>
+                </div>
+                </div>
+                </div>
+</div>
+</div>
+<br><br><br><br><br>
+</body>
+<footer class="bg-black-100 text-center lg:text-left" style="background-color: black ;">
+
+  <div class="text-center text-red-700 p-4">
+    © 2022:blood-donor
+  </div>
+</footer>
+</div>
+</html>
